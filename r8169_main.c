@@ -150,8 +150,10 @@ static const struct pci_device_id rtl8169_pci_tbl[] = {
 	{ PCI_VDEVICE(REALTEK,	0x8161) },
 	{ PCI_VDEVICE(REALTEK,	0x8162) },
 	{ PCI_VDEVICE(REALTEK,	0x8167) },
+#ifdef INCLUDE_R8168
 	{ PCI_VDEVICE(REALTEK,	0x8168) },
 	{ PCI_VDEVICE(NCUBE,	0x8168) },
+#endif
 	{ PCI_VDEVICE(REALTEK,	0x8169) },
 	{ PCI_VENDOR_ID_DLINK,	0x4300,
 		PCI_VENDOR_ID_DLINK, 0x4b10, 0, 0 },
@@ -161,7 +163,9 @@ static const struct pci_device_id rtl8169_pci_tbl[] = {
 	{ PCI_VDEVICE(USR,	0x0116) },
 	{ PCI_VENDOR_ID_LINKSYS, 0x1032, PCI_ANY_ID, 0x0024 },
 	{ 0x0001, 0x8168, PCI_ANY_ID, 0x2410 },
+#ifdef INCLUDE_R8125
 	{ PCI_VDEVICE(REALTEK,	0x8125) },
+#endif
 	{ PCI_VDEVICE(REALTEK,	0x3000) },
 	{}
 };
